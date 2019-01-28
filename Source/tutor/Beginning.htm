@@ -1,0 +1,135 @@
+<HTML><HEAD><TITLE>Beginning</TITLE>
+<script language="JavaScript">
+<!--
+document.write('<body background="images/logix.jpg">');
+var backgroundOffset = 0;
+var bgObject = eval('document.body');
+function scrollBG(maxSize) {
+backgroundOffset = backgroundOffset + 7;
+if (backgroundOffset > maxSize) backgroundOffset = 0;
+bgObject.style.backgroundPosition = "0 " + backgroundOffset;
+}
+var ScrollTimer = window.setInterval("scrollBG(768)", 47);
+//-->
+</script></HEAD>
+<BODY background=images/logix.jpg>
+<H2>
+<CENTER><B><I><FONT color=white 
+size=12>BEGINNING</FONT></I></B></H2></CENTER><BR>
+<CENTER><FONT color=white size=5><B><I>Please Note: There is a "NOW YOU TRY IT" button<BR>at 
+the bottom of the page. This allows you to see how<BR>different inputs give you 
+either a "1" or "0" output.</FONT></I></B></CENTER><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=450><IMG src="images/band.gif"></TD>
+    <TD align=left width=400><FONT color=white size=4><B><I>AND GATE 
+      EXAMPLES</FONT></I></B><BR><FONT color=white size=3><B>For the AND gate's output to be 
+      a "1" (ON-CURRENT), both inputs must be a "1" (ON). The first example's 
+      inputs are both "1" (ON) so the output is "1" (ON-CURRENT); however, in 
+      the second example, the top input P is a "1" (ON) but the bottom input Q 
+      is a "0" (OFF) so the output is a "0" (OFF-NO CURRENT).</B></FONT></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD align=left width=450><IMG src="images/band1.gif"></TD></TD>
+    <TD align=left width=400><FONT color=white size=3><B>In the first example, notice the 
+      top input P is a "0" (OFF) but the bottom input Q is a "1" (ON) so the 
+      output is a "0" (OFF-NO CURRENT). For the second example, both inputs P 
+      and Q are "0" (OFF) so the output is "0" (OFF-NO CURRENT)</B></FONT></TD></TR>
+  <TR>
+    <TD>
+      <HR>
+    </TD>
+    <TD>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD align=left width=450><IMG src="images/bor.gif"></TD>
+    <TD align=left width=400><B><FONT color=white size=4><B><I>OR GATE 
+      EXAMPLES</I></FONT><BR><FONT color=white size=3>For the OR gate's output to be a "1" 
+      (ON-CURRENT), at least one input must be a "1" (ON). These two examples 
+      have at least one input with a "1" (ON) so the outputs are "1" 
+      (ON-CURRENT).</B></FONT></B></TD></TR>
+  <TR>
+    <TD align=left width=450><IMG src="images/bor1.gif"></TD>
+    <TD align=left width=400><B><FONT color=white size=3>In the first example, notice the 
+      top input P is a "0" (OFF) but the bottom input Q is a "1" (ON) so the 
+      output is a "1" (ON-CURRENT). For the second example, both inputs P and Q 
+      are "0" (OFF) so the output is "0" (OFF-NO CURRENT).</B></FONT></TD></TR>
+  <TR>
+    <TD>
+      <HR>
+    </TD>
+    <TD>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD align=left width=450><IMG src="images/bnot.gif"></TD>
+    <TD align=left width=400><B><FONT color=white size=4><B><I>NOT (INVERTER) GATE 
+      EXAMPLES</I></FONT><BR><FONT color=white size=3>For the NOT gate's output to be a "1" 
+      (ON-CURRENT), the input must be a "0" (OFF). Fof the output to be a "0" 
+      (OFF-CURRENT), the input must be a "1" (ON). The NOT gate gives you the 
+      complement input value.</B></FONT></B></TD></TR>
+  <TR>
+    <TD>
+      <HR>
+    </TD>
+    <TD>
+      <HR>
+    </TD></TR><BR><BR>
+  <HR>
+  </TBODY></TABLE>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG src="images/begcirc1.gif"></TD>
+    <TD width=400><FONT color=white size=4>Input for P is 1 (ON), input for Q is 1 (ON). 
+      So when you evaluate the OR gate it's output is 1 (ON). The NOT gate 
+      complements Q's input of 1 to give an output of 0 (OFF). The inputs for 
+      the AND gate are the results of (P OR Q) AND (NOT Q). So the final 
+      resulting output is 0 (OFF).</FONT></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD><IMG src="images/begcirc2.gif"></TD>
+    <TD width=400><FONT color=white size=4>Input for P is 1 (ON), input for Q is 0 (OFF). 
+      So when you evaluate the OR gate it's output is 1 (ON). The NOT gate 
+      complements Q's input of 0 to give an output of 1 (ON). The inputs for the 
+      AND gate are the results of (P OR Q) AND (NOT Q). So the final resulting 
+      output is 1 (ON).</FONT></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD><IMG src="images/begcirc3.gif"></TD>
+    <TD width=400><FONT color=white size=4>Input for P is 0 (OFF), input for Q is 1 (ON). 
+      So when you evaluate the OR gate it's output is 1 (ON). The NOT gate 
+      complements Q's input of 1 to give an output of 0 (OFF). The inputs for 
+      the AND gate are the results of (P OR Q) AND (NOT Q). So the final 
+      resulting output is 0 (OFF).</FONT></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <HR>
+    </TD></TR>
+  <TR>
+    <TD><IMG src="images/begcirc4.gif"></TD>
+    <TD width=400><FONT color=white size=4>Input for P is 0 (OFF), input for Q is 0 (OFF). 
+      So when you evaluate the OR gate it's output is 0 (OFF). The NOT gate 
+      complements Q's input of 0 to give an output of 1 (ON). The inputs for the 
+      AND gate are the results of (P OR Q) AND (NOT Q). So the final resulting 
+      output is 0 (OFF).</FONT></TD></TR></TBODY></TABLE>
+<P>
+<HR>
+<BR>
+<CENTER><A href="NOW YOU TRY IT.htm" 
+
+ onmouseOver="document.images['now'].src ='image/now_On.gif'" 		
+ onmouseOut="document.images['now'].src ='image/now_Off.gif'" ) 		
+ >		
+ <IMG SRC= "image/now_Off.gif" BORDER=0 NAME="now"></A>
+ </CENTER></BODY></HTML>

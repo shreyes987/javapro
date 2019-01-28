@@ -1,0 +1,341 @@
+<HTML><HEAD><TITLE>NOW YOU TRY IT</TITLE>
+<script language="JavaScript">
+<!--
+document.write('<body background="images/logix.jpg">');
+var backgroundOffset = 0;
+var bgObject = eval('document.body');
+function scrollBG(maxSize) {
+backgroundOffset = backgroundOffset + 7;
+if (backgroundOffset > maxSize) backgroundOffset = 0;
+bgObject.style.backgroundPosition = "0 " + backgroundOffset;
+}
+var ScrollTimer = window.setInterval("scrollBG(768)", 47);
+//-->
+</script>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<SCRIPT language=JavaScript>
+
+function changeA(){
+   if (document.AndGate.InputA.value == 1)
+      {document.AndGate.InputA.value = 0
+   } else {
+      document.AndGate.InputA.value = 1}
+}
+
+function changeB() {
+   if (document.AndGate.InputB.value == 1)
+      {document.AndGate.InputB.value = 0
+   } else {
+       document.AndGate.InputB.value = 1}
+}
+
+function And() {
+   if (document.AndGate.InputA.value == 1 && document.AndGate.InputB.value ==1)
+   {document.AndGate.OutputZ.value = 1}
+   else {
+    document.AndGate.OutputZ.value = 0}
+}
+
+function changeS(){
+   if (document.OrGate.InputS.value == 1)
+      {document.OrGate.InputS.value = 0
+   } else {
+      document.OrGate.InputS.value = 1}
+}
+
+function changeT() {
+   if (document.OrGate.InputT.value == 1)
+      {document.OrGate.InputT.value = 0
+   } else {
+       document.OrGate.InputT.value = 1}
+}
+
+function Or() {
+   if (document.OrGate.InputS.value == 1 || document.OrGate.InputT.value ==1)
+   {document.OrGate.OutputZ.value = 1}
+   else {
+    document.OrGate.OutputZ.value = 0}
+}
+
+function changeX(){
+   if (document.NotGate.InputX.value == 1)
+      {document.NotGate.InputX.value = 0
+   } else {
+      document.NotGate.InputX.value = 1}
+}
+function Not() {
+   if (document.NotGate.InputX.value == 1)
+   {document.NotGate.OutputZ.value = 0}
+   else {
+    document.NotGate.OutputZ.value = 1}
+}
+
+function changeP(){
+   if (document.Circ2Gate.InputP.value == 1)
+      {document.Circ2Gate.InputP.value = 0
+   } else {
+      document.Circ2Gate.InputP.value = 1}
+}
+
+function changeQ() {
+   if (document.Circ2Gate.InputQ.value == 1)
+      {document.Circ2Gate.InputQ.value = 0
+   } else {
+       document.Circ2Gate.InputQ.value = 1}
+}
+
+function Circ2() {
+   if (document.Circ2Gate.InputP.value == 0 && document.Circ2Gate.InputQ.value ==1)
+   {document.Circ2Gate.OutputZ.value = 0}
+   else {
+    document.Circ2Gate.OutputZ.value = 1}
+}
+
+function changeD(){
+   if (document.Circ3Gate.InputD.value == 1)
+      {document.Circ3Gate.InputD.value = 0
+   } else {
+      document.Circ3Gate.InputD.value = 1}
+}
+
+function changeE() {
+   if (document.Circ3Gate.InputE.value == 1)
+      {document.Circ3Gate.InputE.value = 0
+   } else {
+       document.Circ3Gate.InputE.value = 1}
+}
+
+function Circ3() {
+   if (document.Circ3Gate.InputD.value == 0 && document.Circ3Gate.InputE.value ==1)
+   {document.Circ3Gate.OutputZ.value = 1}
+   else {
+    document.Circ3Gate.OutputZ.value = 1}
+}
+
+function changeY() {
+   if (document.Circ4Gate.InputY.value == 1)
+      {document.Circ4Gate.InputY.value = 0
+   } else {
+       document.Circ4Gate.InputY.value = 1}
+}
+
+function Circ4() {
+   if (document.Circ4Gate.InputY.value == 0)
+   {document.Circ4Gate.OutputZ.value = 1}
+   else {
+    document.Circ4Gate.OutputZ.value = 1}
+}
+
+function changeJ(){
+   if (document.Circ5Gate.InputJ.value == 1)
+      {document.Circ5Gate.InputJ.value = 0
+   } else {
+      document.Circ5Gate.InputJ.value = 1}
+}
+
+function changeK() {
+   if (document.Circ5Gate.InputK.value == 1)
+      {document.Circ5Gate.InputK.value = 0
+   } else {
+       document.Circ5Gate.InputK.value = 1}
+}
+
+function Circ5() {
+   if (document.Circ5Gate.InputJ.value == 1 && document.Circ5Gate.InputK.value ==0)
+    {document.Circ5Gate.OutputZ.value = 0}
+   else if (document.Circ5Gate.InputJ.value == 0 && document.Circ5Gate.InputK.value ==1)
+    {document.Circ5Gate.OutputZ.value = 0}
+   else{
+    document.Circ5Gate.OutputZ.value = 1}
+}
+</SCRIPT>
+
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY background="images/logix.jpg">
+<H1>
+<CENTER><FONT color=white>NOW YOU TRY IT</FONT></H1></CENTER><BR><BR>
+<P><FONT color=white size=4><B>Try this gate demonstration. Change the inputs and watch what 
+value the outputs have.</FONT></B>
+<CENTER></CENTER><BR><BR>
+<FORM name=AndGate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>AND GATE</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><INPUT name="Change InputA" onclick="changeA();&#13;&#10;And()" type=button value="Change Input A"></TD>
+    <TD><INPUT name=InputA size=1 value=1></TD>
+    <TD rowSpan=3><IMG align=middle src="images/nytand.gif"></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD vAlign=top><INPUT name=OutputZ size=1></TD></TR>
+  <TR>
+    <TD vAlign=top><INPUT name="Change InputB" onclick="changeB();&#13;&#10;And()" type=button value="Change Input B"></TD>
+    <TD vAlign=top><INPUT name=InputB size=1 value=0></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM><BR><BR>
+<FORM name=OrGate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>OR GATE</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD><INPUT name="Change InputS" onclick="changeS();&#13;&#10;Or()" type=button value="Change Input S"></TD>
+    <TD><INPUT name=InputS size=1 value=1></TD>
+    <TD rowSpan=3><IMG align=middle src="images/nytor.gif"></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD vAlign=top><INPUT name=OutputZ size=1></TD></TR>
+  <TR>
+    <TD vAlign=top><INPUT name="Change InputT" onclick="changeT();&#13;&#10;Or()" type=button value="Change Input T"></TD>
+    <TD vAlign=top><INPUT name=InputT size=1 value=0></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM><BR><BR>
+<FORM name=NotGate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>NOT GATE</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=center><INPUT name="Change InputX" onclick="changeX();&#13;&#10;Not()" type=button value="Change Input X"></TD>
+    <TD><INPUT name=InputX size=1 value=1></TD>
+    <TD><IMG align=middle src="images/nytnot.gif"></TD>
+    <TD><INPUT name=OutputZ size=1></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM><BR><BR>
+<FORM name=Circ4Gate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>COMBINATIONAL CIRCUIT #1</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=top><BR><INPUT name="Change InputY" onclick="changeY();&#13;&#10;Circ4()" type=button value="Change Input Y"></TD>
+    <TD vAlign=top><BR><INPUT name=InputY size=1 value=1></TD>
+    <TD><IMG align=top src="images/nytcirc4.gif"></TD>
+    <TD><INPUT name=OutputZ size=1></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM><BR><BR>
+<FORM name=Circ2Gate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>COMBINATIONAL CIRCUIT #2</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=top><INPUT name="Change InputP" onclick="changeP();&#13;&#10;Circ2()" type=button value="Change Input P"><BR><BR><BR><BR><INPUT name="Change InputQ" onclick="changeQ();&#13;&#10;Circ2()" type=button value="Change Input Q"></TD>
+    <TD vAlign=top><INPUT name=InputP size=1 value=1><BR><BR><BR><BR><INPUT 
+      name=InputQ size=1 value=0></TD>
+    <TD rowSpan=3><IMG align=middle src="images/nytcirc2.gif"> 
+    </TD>
+    <TD><BR><INPUT name=OutputZ size=1></TD></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM>
+<FORM name=Circ3Gate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>COMBINATIONAL CIRCUIT #3</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD vAlign=top><INPUT name="Change InputD" onclick="changeD();&#13;&#10;Circ3()" type=button value="Change Input D"><BR><BR><BR><BR><INPUT name="Change InputE" onclick="changeE();&#13;&#10;Circ3()" type=button value="Change Input E"></TD>
+    <TD vAlign=top><INPUT name=InputD size=1 value=1><BR><BR><BR><BR><INPUT 
+      name=InputE size=1 value=0></TD>
+    <TD rowSpan=3><IMG align=middle src="images/nytcirc3.gif"> 
+    </TD>
+    <TD><INPUT name=OutputZ size=1></TD></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM>
+<FORM name=Circ5Gate>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD></TD>
+    <TD></TD>
+    <TD><FONT color=white size=4><B><I>COMBINATIONAL CIRCUIT #4</I></B></FONT></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD rowSpan=3><BR><BR><BR><BR><BR><BR><INPUT name="Change InputJ" onclick="changeJ();&#13;&#10;Circ5()" type=button value="Change Input J"><BR><BR><BR><BR><INPUT name="Change InputK" onclick="changeK();&#13;&#10;Circ5()" type=button value="Change Input K"></TD>
+    <TD rowSpan=3><BR><BR><BR><BR><BR><BR><INPUT name=InputJ size=1 
+      value=1><BR><BR><BR><BR><INPUT name=InputK size=1 value=0></TD>
+    <TD rowSpan=3><IMG align=middle src="images/nytcirc5.gif"> 
+    </TD>
+    <TD vAlign=top><BR><BR><BR><BR><INPUT name=OutputZ size=1></TD></TD></TR>
+  <TR>
+    <TD colSpan=4></TD></TR></TBODY></TABLE>
+<HR>
+</FORM><BR>
+<CENTER>
+<A href="LOGICAL EXPRESSIONS USING BOOLEAN ALGEBRA.htm"
+onmouseOver="document.images['logic'].src ='image/logic_On.gif'" 		
+ onmouseOut="document.images['logic'].src ='image/logic_Off.gif'" ) 		
+ >		
+ <IMG SRC= "image/logic_Down.gif" BORDER=0 NAME="logic"></A>
+ 
+
+</CENTER></BODY></HTML>

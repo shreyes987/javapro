@@ -1,0 +1,5 @@
+<A HREF="" 		
+ onmouseOver="document.images['dict'].src ='dict_On.gif'" 		
+ onmouseOut="document.images['dict'].src ='dict_Off.gif'" ) 		
+ >		
+ <IMG SRC= "dict_Down.gif" BORDER=0 NAME="dict"></A>

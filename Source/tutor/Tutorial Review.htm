@@ -1,0 +1,398 @@
+<HTML><HEAD><TITLE>Tutorial Review</TITLE>
+<script language="JavaScript">
+<!--
+document.write('<body background="images/logix.jpg">');
+var backgroundOffset = 0;
+var bgObject = eval('document.body');
+function scrollBG(maxSize) {
+backgroundOffset = backgroundOffset + 7;
+if (backgroundOffset > maxSize) backgroundOffset = 0;
+bgObject.style.backgroundPosition = "0 " + backgroundOffset;
+}
+var ScrollTimer = window.setInterval("scrollBG(768)", 47);
+//-->
+</script></HEAD>
+
+<BODY background="images/logix.jpg">
+<H2>
+<CENTER><B><I><FONT color=white size=12>Tutorial 
+Review</FONT></I></B></CENTER></H2>
+<font color = white>
+<SCRIPT language=JavaScript>
+
+function HintWindow1() 
+{
+
+hint1=window.open("", "HintWindow1", "toolbar=no,directories=no,menubar=no,scrollbars=no,width=400,height=200");
+
+hint1.document.write("<HTML><HEAD>"); 
+
+hint1.document.writeln("<TITLE>Logic Gate Symbols</TITLE>");
+
+hint1.document.writeln("</HEAD><BODY  BGCOLOR=FFFFFF>");
+hint1.document.writeln("<CENTER><img src='images/hint1.gif'>");
+hint1.document.writeln("<FORM></FORM></CENTER>");
+hint1.document.writeln("</BODY></HTML>");
+hint1.document.close();
+}
+
+function HintWindow2() 
+{ 
+hint2=window.open("", "HintWindow2", "toolbar=no,directories=no,menubar=no,scrollbars=no,width=455,height=400");
+hint2.document.write("<HTML><HEAD>"); 
+hint2.document.writeln("<TITLE>Algebraic Expressions</TITLE>");
+hint2.document.writeln("</HEAD><BODY  BGCOLOR=FFFFFF>");
+hint2.document.writeln("<CENTER><img src='images/hint2.gif'>");
+hint2.document.writeln("<FORM></FORM></CENTER>");
+hint2.document.writeln("</BODY></HTML>");
+hint2.document.close();
+}
+
+
+function HintWindow3()
+{ 
+hint3=window.open("", "HintWindow3", "toolbar=no,directories=no,menubar=no,scrollbars=no,width=450,height=350");
+hint3.document.write("<HTML><HEAD>"); 
+hint3.document.writeln("<TITLE>Evaluate Logic Circuit</TITLE>");
+hint3.document.writeln("</HEAD><BODY  BGCOLOR=FFFFFF>");
+hint3.document.writeln("<CENTER><img src='images/hint3.gif'>");
+hint3.document.writeln("<FORM></FORM></CENTER>");
+hint3.document.writeln("</BODY></HTML>");
+hint3.document.close();
+}
+
+
+function HintWindow4() 
+
+{ 
+hint4=window.open("", "HintWindow4","toolbar=no,directories=no,menubar=no,scrollbars=no,width=450,height=400");
+hint4.document.write("<HTML><HEAD>"); 
+hint4.document.writeln("<TITLE>Creating Gates From a Truth Table</TITLE>");
+hint4.document.writeln("</HEAD><BODY  BGCOLOR=FFFFFF>");
+hint4.document.writeln("<CENTER><img src='images/hint4.gif'>");
+hint4.document.writeln("<FORM></FORM></CENTER>");
+hint4.document.writeln("</BODY></HTML>");
+hint4.document.close();
+}
+
+
+function tester() 
+{
+var total
+var a = 0 
+var b = 0 
+var c = 0 
+var d = 0 
+var e = 0 
+var f = 0 
+var g = 0
+var h = 0 
+var i = 0 
+var j = 0 
+var k = 0 
+var l = 0 
+var m = 0 
+var n = 0 
+var o = 0 
+var p = 0 
+var q = 0 
+var r = 0 
+var s = 0 
+var t = 0 
+var u = 0 
+var v = 0
+if(document.forms[0].elements[1].checked==true)
+ {a = 1}
+if(document.forms[0].elements[3].checked==true) 
+ {b = 1}
+if(document.forms[0].elements[8].checked==true)
+ {c = 1}
+if(document.forms[0].elements[9].checked==true)
+ {d = 1}
+if(document.forms[0].elements[12].checked==true)
+ {e = 1}
+if(document.forms[0].elements[14].checked==true) 
+ {f = 1}
+if(document.forms[0].elements[15].checked==true)
+ {g = 1}
+if(document.forms[0].elements[18].checked==true)
+ {h = 1}
+if(document.forms[0].elements[20].checked==true)
+ {i = 1}
+if(document.forms[0].elements[26].checked==true)
+ {j = 1}
+if(document.forms[0].elements[29].checked==true)
+ {k = 1}
+if(document.forms[0].elements[31].checked==true)
+ {l = 1}
+if(document.forms[0].elements[33].checked==true)
+ {m = 1}
+if(document.forms[0].elements[36].checked==true)
+ {n = 1}
+if(document.forms[0].elements[37].checked==true)
+ {o = 1}
+if(document.forms[0].elements[40].checked==true)
+ {p = 1}
+if(document.forms[0].elements[46].checked==true)
+ {q = 1}
+if(document.forms[0].elements[51].checked==true)
+ {r = 1}
+if(document.forms[0].elements[54].checked==true)
+ {s = 1}
+if(document.forms[0].elements[61].checked==true)
+ {t = 1}
+if(document.forms[0].elements[70].checked==true)
+ {u = 1}
+if(document.forms[0].elements[74].checked==true)
+ {v = 1}
+
+total = a + b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v 
+if(total == 22)
+ {alert("22 out of 22 correct, Great Job!")}
+if(total < 22) 
+ {alert("You got " + total + " out of 22 correct, try again!")}
+}
+</SCRIPT>
+
+<FORM action name=reviewTest onsubmit=tester()>
+<BR><BR><FONT size=3 color = white><B>1. NAME THE GATES: </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=175><IMG src="images/t1o.gif"></TD>
+    <TD><FONT color = white size=3><B><INPUT name=aa type=radio>AND<BR><INPUT name=aa 
+      type=radio>OR<BR><INPUT name=aa type=radio>NOT</B></FONT></TD>
+    <TD align=left width=175><IMG src="images/t1a.gif"></TD>
+    <TD><FONT color = white size=3><B><INPUT name=bb type=radio>AND<BR><INPUT name=bb 
+      type=radio>OR<BR><INPUT name=bb type=radio>NOT</B></FONT></TD>
+    <TD align=left width=175><IMG src="images/t1i.gif"></TD>
+    <TD><FONT color = white size=3><B><INPUT name=cc type=radio>AND<BR><INPUT name=cc 
+      type=radio>OR<BR><INPUT name=cc type=radio>NOT</B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR></TBODY></TABLE><BR><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><FONT color = white size=4><B><INPUT name=dd type=radio>True <INPUT name=dd 
+      type=radio>False</B></FONT></TD>
+    <TD width=20></TD>
+    <TD><FONT color = white size=4><B>2. PQ means P and Q. </B></FONT></TD>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT color = white size=4><B><INPUT name=ee type=radio>True <INPUT name=ee 
+      type=radio>False</B></FONT></TD>
+    <TD width=20></TD>
+    <TD><FONT color = white size=4><B>3. P+Q means P plus Q. </B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT color = white size=4><B><INPUT name=ff type=radio>True <INPUT name=ff 
+      type=radio>False</B></FONT></TD>
+    <TD width=20></TD>
+    <TD><FONT color = white size=4><B>4. P is the same as P'. </B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT color = white size=4><B><INPUT name=gg type=radio>True <INPUT name=gg 
+      type=radio>False</B></FONT></TD>
+    <TD width=20></TD>
+    <TD><FONT color = white size=4><B>5. For an AND gate to have an output of "1", all 
+      inputs must be 1. </B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD><FONT color = white size=4><B><INPUT name=hh type=radio>True <INPUT name=hh 
+      type=radio>False</B></FONT></TD>
+    <TD width=20></TD>
+    <TD><FONT color = white size=4><B>6. A NOT gate is not the same as an Inverter. 
+      </B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR></TBODY></TABLE>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width=700></TD>
+    <TD align=right width=500> 
+
+    <a      onmouseout=hint1.close() onmouseover=HintWindow1()><FONT color = white 
+      size=5>HINT</FONT></a> </TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>7. 
+Which is the correct logical expression for this circuit? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=400><IMG src="images/t7c.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=ii type=radio>F = (PQ) OR 
+      Q'<BR><INPUT name=ii type=radio>F = (PQ) AND Q'<BR><INPUT name=ii 
+      type=radio>F = (PQ) OR Q<BR><INPUT name=ii type=radio>F = (PQ) AND 
+      Q</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint2.close() onmouseover=HintWindow2()><FONT color = white 
+      size=5>HINT</FONT></A> </TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>8. 
+Which is the correct logical expression for this circuit? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=410><IMG src="images/tutcic5.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=jj type=radio>F = (P+Q) OR 
+      Q'<BR><INPUT name=jj type=radio>F = (PQ) AND Q'<BR><INPUT name=jj 
+      type=radio>F = (PQ) OR Q<BR><INPUT name=jj type=radio>F = (P+Q) AND 
+      Q'</B></FONT></TD>
+    <TD align=right width=100><A 
+       
+      onmouseout=hint2.close() onmouseover=HintWindow2()><FONT color = white 
+      size=5>HINT</FONT></A> </TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>9. 
+Which is the correct logical expression for this gate? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=300><IMG src="images/T1a.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=kk type=radio>F = P OR 
+      Q<BR><INPUT name=kk type=radio>F = NOT P<BR><INPUT name=kk type=radio>F = 
+      P AND Q<BR><INPUT name=kk type=radio>F = NOT 
+Q</B></FONT></TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>10. What is the 
+correct output for this logical circuit? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=500><IMG src="images/tutcirc1.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=ll type=radio>1 (On)<BR><INPUT 
+      name=ll type=radio>0 (Off)</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint3.close() onmouseover=HintWindow3()><FONT color = white
+      size=5>HINT</FONT></A></TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>11. What 
+is the correct output for this logical circuit? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=500><IMG src="images/tutcirc2.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=mm type=radio>1 (On)<BR><INPUT 
+      name=mm type=radio>0 (Off)</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint3.close() onmouseover=HintWindow3()><FONT color = white 
+      size=5>HINT</FONT></A></TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>12. What 
+is the correct output for this logical circuit? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=500><IMG src="images/tutcirc3.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=nn type=radio>1 (On)<BR><INPUT 
+      name=nn type=radio>0 (Off)</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint3.close() onmouseover=HintWindow3()><FONT color = white
+      size=5>HINT</FONT></A></TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=4><B>13. What 
+is the correct output for this logical circuit? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=450><IMG src="images/tutcirc4.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=oo type=radio>1 (On)<BR><INPUT 
+      name=oo type=radio>0 (Off)</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint3.close() onmouseover=HintWindow3()><FONT color = white
+      size=5>HINT</FONT></A></TD></TR></TBODY></TABLE><FONT color = white size=4><B>14. What is the 
+correct logical expression for this truth table? </B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=300><IMG src="images/test_tt1.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=pp type=radio>P'Q' + 
+      PQ'<BR><INPUT name=pp type=radio>PQ + PQ' + P'Q'<BR><INPUT name=pp 
+      type=radio>PQ + P'Q AND P'Q'<BR><INPUT name=pp type=radio>PQ + P'Q + 
+      P'Q'</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint4.close() onmouseover=HintWindow4()><FONT color = white
+      size=5>HINT</FONT></A></TD></TR></FONT></B></TBODY></TABLE><BR><FONT color = white
+size=4><B>15. What is the correct logical expression for this truth table? 
+</B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left width=300><IMG src="images/test_tt2.gif"></TD>
+    <TD width=300><FONT color = white size=3><B><INPUT name=qq type=radio>PQ'<BR><INPUT 
+      name=qq type=radio>P'Q + PQ'<BR><INPUT name=qq type=radio>PQ<BR><INPUT 
+      name=qq type=radio>P'Q'</B></FONT></TD>
+    <TD align=right width=200><A 
+       
+      onmouseout=hint4.close() onmouseover=HintWindow4()><FONT color = white
+      size=5>HINT</FONT></A></TD></TR></TBODY></TABLE><BR><BR><FONT color = white size=3><B>Match 
+the definition to the correct word:<BR><BR>
+<CENTER>a..............AND GATE <BR>b...............CURRENT 
+<BR>c.................OR GATE <BR>d...............NOT GATE <BR>e........TRUTH 
+TABLE <BR>f........................GATE <BR></CENTER></B></FONT><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width=250><FONT color = white size=4><B><INPUT name=rr type=radio>a <INPUT name=rr 
+      type=radio>b <INPUT name=rr type=radio>c <INPUT name=rr type=radio>d 
+      <INPUT name=rr type=radio>e <INPUT name=rr type=radio>f 
+    </B></FONT></TD></FONT></B>
+    <TD width=10></TD>
+    <TD width=400><FONT color = white size=3><B>16. A matrix which describes a logic 
+      function by listing all possible combination of inputs, and by indicating 
+      the outputs for each combination of inputs. </B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD width=250><FONT  color = white size=4><B><INPUT name=ss type=radio>a <INPUT name=ss 
+      type=radio>b <INPUT name=ss type=radio>c <INPUT name=ss type=radio>d 
+      <INPUT name=ss type=radio>e <INPUT name=ss type=radio>f </B></FONT></TD>
+    <TD width=10></TD>
+    <TD width=400><FONT color = white size=3><B>17. Movement of electrons through a 
+      conductor (input/output lines). </B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR><BR><BR>
+  <TR>
+    <TD width=250><FONT color = white size=4><B><INPUT name=tt type=radio>a <INPUT name=tt 
+      type=radio>b <INPUT name=tt type=radio>c <INPUT name=tt type=radio>d 
+      <INPUT name=tt type=radio>e <INPUT name=tt type=radio>f </B></FONT></TD>
+    <TD width=10></TD>
+    <TD width=400><FONT color = white size=3><B>18. A gate that returns an output of TRUE 
+      (ON/1) whenever anyone input is TRUE (ON/1).<BR></B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD width=250><FONT color = white size=4><B><INPUT name=uu type=radio>a <INPUT name=uu 
+      type=radio>b <INPUT name=uu type=radio>c <INPUT name=uu type=radio>d 
+      <INPUT name=uu type=radio>e <INPUT name=uu type=radio>f </B></FONT></TD>
+    <TD width=10></TD>
+    <TD width=400><FONT color = white size=3><B>19. A circuit with two or more inputs and 
+      one output.<BR></B></FONT></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD></TR>
+  <TR>
+    <TD width=250><FONT color = white size=4><B><INPUT name=vv type=radio>a <INPUT name=vv 
+      type=radio>b <INPUT name=vv type=radio>c <INPUT name=vv type=radio>d 
+      <INPUT name=vv type=radio>e <INPUT name=vv type=radio>f </B></FONT></TD>
+    <TD width=10></TD>
+    <TD width=400><FONT color = white size=3><B>20. A circuit that complements an input 
+      value for its output value.<BR></B></FONT></TD></TR></TBODY></TABLE><BR><BR>
+<CENTER><INPUT type=submit value="get score"> <INPUT type=reset value=clear> 
+</font>
+</CENTER></FORM></BODY></HTML>

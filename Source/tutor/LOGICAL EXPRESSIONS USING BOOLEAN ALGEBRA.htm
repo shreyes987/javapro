@@ -1,0 +1,140 @@
+<HTML><HEAD><TITLE>LOGICAL EXPRESSIONS USING BOOLEAN ALGEBRA</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgcolor=black>
+<H1>
+<CENTER><B><I><FONT color=white>LOGICAL EXPRESSIONS<BR>USING BOOLEAN 
+ALGEBRA</H1></I></B></CENTER><BR>
+<P><FONT color=white size=4>The purpose of Boolean algebra is to facilitate the analysis and 
+design of digital circuits. Boolean algebra is an algebra that deals with binary 
+variables and logic operations. The variables can be designated by letters such 
+as P, Q, X, Y, etc. The three basic logic operations are AND, OR, and NOT 
+(complement). A Boolean function can be expressed algebraically with binary 
+variables, the logic operation symbols, parentheses, and equal sign. For a given 
+value of the variables, the Boolean function can be either 1 or 0. A Boolean 
+function can be transformed from an algebraic expression into a logic diagram 
+composed of AND, OR, and NOT (inverter) gates.</B></FONT><BR><BR><BR><BR><BR><B>
+<CENTER><FONT color=white size=5>EXAMPLE 1</B></FONT></CENTER><BR><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG 
+    src="images/lecirc2.gif"></TD>
+    <TD width=20></TD>
+    <TD vAlign=top><FONT color=white size=4><B><BR><BR>This logic diagram's algebraic 
+      expression can be written several different ways and mean the same 
+      thing:<BR><I>F=PQ AND Q'<BR>F=(P AND Q) AND NOT 
+  Q<BR></B></I></FONT></TD></TR></FONT></TBODY></TABLE><BR><BR>
+<HR>
+<BR>
+<CENTER><FONT color=white size=5><B><I>NOW BREAK DOWN THE EXPRESSION INTO PARTS<BR>IT'S 
+EASIER TO WORK</B></I></FONT></CENTER><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=middle width=225><IMG 
+      src="images/leand1.gif"></TD>
+    <TD align=left rowSpan=2 width=200><FONT color=white size=4><B>This particular circuit 
+      has an AND gate and a NOT gate. </FONT></B></TD>
+    <TD align=middle rowSpan=2 width=225><IMG 
+      src="images/leand2.gif"></TD>
+    <TD align=left rowSpan=2 width=200><FONT color=white size=4><B>The inputs into the AND 
+      gate are the outputs from the AND gate and NOT gate.</FONT></B></TD></TR>
+  <TR>
+    <TD><IMG 
+    src="images/lenot1.gif"></TD></TR></TBODY></TABLE>
+<HR>
+
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG 
+    src="images/lecirc1.gif"></TD>
+    <TD width=40></TD>
+    <TD align=left width=300><FONT color=white size=4><B>The completed circuit with each 
+      binary variable and logic operation symbols named. Remember that the 
+      algebraic expression could also be written as:<BR><BR><I>F=(P AND Q) AND 
+      (NOT Q)<BR></B></I></FONT></TD></TR></TBODY></TABLE><BR><BR>
+<HR>
+<BR>
+<CENTER><FONT color=white size=5><B>Truth Table For Example 1</B></CENTER></FONT><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG 
+      src="images/letruth1.gif"></TD>
+    <TD width=40></TD>
+    <TD align=left width=300><FONT color=white size=4><B>In the colums, the truth table 
+      states both a T (1) and F (0) which gives an example of T for True and 1 
+      for ON as well as F for False and 0 for OFF. The last column is the result 
+      of (NOT Q) AND (PQ).</B></FONT></TD></TR></TBODY></TABLE><BR>
+<HR>
+
+<HR>
+<BR><B>
+<CENTER><FONT color=white size=5>EXAMPLE 2</B></FONT></CENTER><BR><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG src="images/log.gif"></TD>
+    <TD width=40></TD>
+    <TD SIDTH="300"><FONT color=white size=4><B>This logic diagram's algebraic 
+      expression<BR>can be written several different ways:<BR><BR><I>F=PQ + 
+      ST<BR>F=(P AND Q) OR (S AND T)<BR><I>Each equation is the same</I> 
+      </I></B></FONT></TD></I></B></FONT></TR></TBODY></TABLE>
+<HR>
+<BR>
+<CENTER><FONT color=white size=5><B><I>BREAK THE EXPRESSION INTO PARTS<BR>AS THE EXAMPLE 
+ABOVE DID</B></I></FONT></CENTER><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG 
+src="images/log2.gif"></TD>
+    <TD rowSpan=2><FONT color=white size=4><B>This particular circuit<BR>has the AND gate 
+      twice. </FONT></B></TD>
+    <TD rowSpan=2><IMG 
+      src="images/log3.gif"></TD>
+    <TD rowSpan=2><FONT color=white size=4><B>The inputs into the OR<BR>gate are the 
+      outputs from<BR>the 2 AND gates.</FONT></B></TD></TR>
+  <TR>
+    <TD><IMG 
+  src="images/log4.gif"></TD></TR></TBODY></TABLE>
+<HR>
+
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG 
+src="images/log1.gif"></TD>
+    <TD width=20></TD>
+    <TD><FONT color=white size=4><B>The completed circuit with each binary variable and 
+      logic operation symbols named.<BR>Remember that the algebraic expression 
+      could also be written as:<BR><BR><I>F=(P AND Q) OR (S AND 
+      T)<BR></B></I></FONT></TD></TR></TBODY></TABLE><BR>
+<HR>
+<BR>
+<CENTER><FONT color=white size=5><B>Truth Table For Example 2</B></CENTER></FONT><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width=500><IMG 
+      src="images/letruth2.gif"></TD>
+    <TD width=50></TD>
+    <TD align=left width=300><Font color=white size=4><B>In this example, please note that 
+      PQ and ST's values are <I>both</I> given in the first two columns. The 
+      third column has the value of either P AND Q or S AND T. The fourth and 
+      fifth columns are the possible values of <I>PQ and ST</I>. The last column 
+      is the resultant of (P AND Q) <I>OR</I> (S AND T). Remember that (P AND Q) 
+      is the same thing as (PQ).</B></FONT></TD></TR></TBODY></TABLE><BR>
+<HR>
+<BR>
+<CENTER>
+<A href="Truth Table.htm"
+ onmouseOver="document.images['tt'].src ='image/tt_On.gif'" 		
+ onmouseOut="document.images['tt'].src ='image/tt_Off.gif'" ) 		
+ >		
+ <IMG SRC= "image/tt_Down.gif" BORDER=0 NAME="tt"></A>
+ 
+
+</CENTER></BODY></HTML>

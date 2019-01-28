@@ -1,0 +1,302 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 9/3/2004 12:16:07 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   LogixPanel.java
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.File;
+import java.net.URL;
+import javax.swing.*;
+
+public class LogixPanel extends JPanel
+    implements ActionListener, ItemListener, AdjustmentListener, MouseWheelListener
+{
+
+    public LogixPanel(JFrame jframe)
+    {
+        canSave = true;
+        canLoad = true;
+        path = "images/";
+        owner = jframe;
+        setBackground(Color.white);
+        setOpaque(true);
+        setToolTipText("You are on CircuitPanel");
+        JPanel jpanel = new JPanel();
+        JPanel jpanel1 = new JPanel();
+        deleteButton = new JButton("Delete", new ImageIcon("images/rbs.gif"));
+        deleteButton.setToolTipText("Click here to delete the selected item");
+        deleteButton.addActionListener(this);
+        undoButton = new JButton("Undo", new ImageIcon("images/rbs.gif"));
+        undoButton.setToolTipText("Click here to undo the last action");
+        undoButton.addActionListener(this);
+        iconifyButton = new JButton("Iconify", new ImageIcon("images/rbs.gif"));
+        iconifyButton.setToolTipText("Click here to iconify the circuit");
+        iconifyButton.addActionListener(this);
+        deIconifyButton = new JButton("Enlarge", new ImageIcon("images/rbs.gif"));
+        deIconifyButton.setToolTipText("Click here to enlarge selected iconified item");
+        deIconifyButton.addActionListener(this);
+        loadButton = new JButton("Load", new ImageIcon("images/rbs.gif"));
+        loadButton.setToolTipText("Click here to load saved files");
+        loadButton.addActionListener(this);
+        saveButton = new JButton("Save", new ImageIcon("images/rbs.gif"));
+        saveButton.setToolTipText("Click here to save your circuit");
+        saveButton.addActionListener(this);
+        clearButton = new JButton("Clear", new ImageIcon("images/rbs.gif"));
+        clearButton.setToolTipText("Click here to clear the circuit");
+        clearButton.addActionListener(this);
+        powerCheckbox = new JCheckBox("Power ", new ImageIcon("images/offline.gif"));
+        powerCheckbox.setToolTipText("Click here to power the circuit \n  Red indicates 1 and no power indicates 0");
+        powerCheckbox.addItemListener(this);
+        deleteButton.setEnabled(false);
+        undoButton.setEnabled(false);
+        deIconifyButton.setEnabled(false);
+        deleteButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        undoButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        iconifyButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        deIconifyButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        loadButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        saveButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        clearButton.setRolloverIcon(new ImageIcon("images/rbr.gif"));
+        deleteButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        undoButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        iconifyButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        deIconifyButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        loadButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        saveButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        clearButton.setPressedIcon(new ImageIcon("images/rbp.gif"));
+        powerCheckbox.setSelectedIcon(new ImageIcon("images/online.gif"));
+        nameInput = new JTextField("Untitled", 12);
+        speedChoice = new JComboBox();
+        speedChoice.addItem("Fast");
+        speedChoice.addItem("Moderate");
+        speedChoice.addItem("Slow");
+        speedChoice.addActionListener(this);
+        jpanel1.add(clearButton);
+        jpanel1.add(loadButton);
+        jpanel1.add(saveButton);
+        jpanel1.add(new JLabel("  Title:"));
+        jpanel1.add(nameInput);
+        jpanel.add(speedChoice);
+        jpanel.add(powerCheckbox);
+        jpanel.add(deleteButton);
+        jpanel.add(undoButton);
+        jpanel.add(iconifyButton);
+        jpanel.add(deIconifyButton);
+        circuit = new JPanel();
+        scroll = new JScrollBar(1);
+        scroll.addAdjustmentListener(this);
+        scroll.addMouseWheelListener(this);
+        canvas = new LogixCktCanvas(this, scroll, undoButton);
+        circuit.setBackground(Color.white);
+        circuit.setLayout(new BorderLayout());
+        circuit.add("Center", canvas);
+        circuit.add("West", scroll);
+        setLayout(new BorderLayout());
+        add("North", jpanel1);
+        add("South", jpanel);
+        add("Center", circuit);
+    }
+
+    public void loadURL(URL url)
+    {
+        canvas.loadURL(url);
+    }
+
+    public void loadFile(String s)
+    {
+        canvas.loadFile(s, null);
+    }
+
+    public void start()
+    {
+        canvas.start();
+    }
+
+    public void stop()
+    {
+        canvas.OSC = null;
+        canvas.OSG = null;
+        canvas.stop();
+    }
+
+    public void destroy()
+    {
+        if(canvas.runner != null && canvas.runner.isAlive())
+            canvas.runner.stop();
+        if(canvas.loader.runner != null && canvas.loader.runner.isAlive())
+            canvas.loader.runner.stop();
+    }
+
+    public void doLoad()
+    {
+        if(!canLoad)
+            return;
+        JFileChooser jfilechooser = null;
+        try
+        {
+            Object obj = this;
+            do
+            {
+                Container container = ((Container) (obj)).getParent();
+                if(container == null)
+                    break;
+                obj = container;
+            } while(true);
+            if(!(obj instanceof JFrame))
+                obj = null;
+            jfilechooser = new JFileChooser();
+            int i = jfilechooser.showOpenDialog(((java.awt.Component) (obj)));
+            if(i == 1)
+                return;
+        }
+        catch(AWTError awterror)
+        {
+            canvas.setMessage("ERROR while trying to create a file dialog box.+It will not be possible to save files.");
+            canLoad = false;
+            loadButton.setEnabled(false);
+            return;
+        }
+        catch(RuntimeException runtimeexception)
+        {
+            canvas.setMessage("ERROR while trying to create a file dialog box.+It will not be possible to save files.");
+            canLoad = false;
+            loadButton.setEnabled(false);
+            return;
+        }
+        String s = jfilechooser.getSelectedFile().getName();
+        if(s == null)
+        {
+            return;
+        } else
+        {
+            String s1 = jfilechooser.getCurrentDirectory().getAbsolutePath();
+            canvas.loadFile(s, s1);
+            owner.setTitle("Logix:-" + s);
+            return;
+        }
+    }
+
+    public void doSave()
+    {
+        if(!canSave)
+            return;
+        String s = null;
+        Object obj = null;
+        JFileChooser jfilechooser = null;
+        try
+        {
+            Object obj1 = this;
+            do
+            {
+                Container container = ((Container) (obj1)).getParent();
+                if(container == null)
+                    break;
+                obj1 = container;
+            } while(true);
+            if(!(obj1 instanceof JFrame))
+                obj1 = null;
+            jfilechooser = new JFileChooser();
+            int i = jfilechooser.showSaveDialog(((java.awt.Component) (obj1)));
+            if(i == 1)
+                return;
+        }
+        catch(RuntimeException runtimeexception)
+        {
+            canvas.setMessage("ERROR while trying to create a file dialog box.+It will not be possible to save files.");
+            canSave = false;
+            saveButton.setEnabled(false);
+            return;
+        }
+        s = jfilechooser.getSelectedFile().getName();
+        if(s == null)
+        {
+            return;
+        } else
+        {
+            String s1 = jfilechooser.getCurrentDirectory().getAbsolutePath();
+            canvas.saveToFile(s, s1);
+            return;
+        }
+    }
+
+    public void actionPerformed(ActionEvent actionevent)
+    {
+        if(actionevent.getSource() == saveButton)
+            doSave();
+        else
+        if(actionevent.getSource() == loadButton)
+            doLoad();
+        else
+        if(actionevent.getSource() == clearButton)
+            canvas.doClear();
+        else
+        if(actionevent.getSource() == iconifyButton)
+            canvas.doIconify();
+        else
+        if(actionevent.getSource() == deleteButton)
+            canvas.doDelete();
+        else
+        if(actionevent.getSource() == undoButton)
+            canvas.undoer.click();
+        else
+        if(actionevent.getSource() == deIconifyButton)
+            canvas.doDeIconify();
+        else
+        if(actionevent.getSource() == speedChoice)
+            canvas.doSpeedChoice(speedChoice.getSelectedIndex());
+        else
+            return;
+    }
+
+    public void itemStateChanged(ItemEvent itemevent)
+    {
+        int i = itemevent.getStateChange();
+        if(i == 1)
+            canvas.doPower(true);
+        else
+            canvas.doPower(false);
+    }
+
+    public void adjustmentValueChanged(AdjustmentEvent adjustmentevent)
+    {
+        if(adjustmentevent.getID() == 602 || adjustmentevent.getID() == 601 || adjustmentevent.getID() == 604 || adjustmentevent.getID() == 603 || adjustmentevent.getID() == 605)
+        {
+            canvas.scroller.doScroll();
+            return;
+        } else
+        {
+            return;
+        }
+    }
+
+    public void mouseWheelMoved(MouseWheelEvent mousewheelevent)
+    {
+        if(mousewheelevent.getID() == 602 || mousewheelevent.getID() == 601 || mousewheelevent.getID() == 604 || mousewheelevent.getID() == 603 || mousewheelevent.getID() == 605)
+        {
+            canvas.scroller.doScroll();
+            return;
+        } else
+        {
+            return;
+        }
+    }
+
+    public JButton deleteButton;
+    public JButton undoButton;
+    public JButton iconifyButton;
+    public JButton deIconifyButton;
+    public JButton loadButton;
+    public JButton saveButton;
+    public JButton clearButton;
+    public JCheckBox powerCheckbox;
+    public LogixCktCanvas canvas;
+    public JScrollBar scroll;
+    public JTextField nameInput;
+    public JComboBox speedChoice;
+    public JPanel circuit;
+    public boolean canSave;
+    public boolean canLoad;
+    public JFrame owner;
+    public String path;
+}

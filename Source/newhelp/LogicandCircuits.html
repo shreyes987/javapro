@@ -1,0 +1,128 @@
+<HTML>
+
+<HEAD> <TITLE>Logic and Circuits</TITLE> </HEAD>
+
+<BODY bgcolor="black" text="#cccccc">
+
+<blockquote>
+<HR>
+<H3><center><font color="#ff6633"><A NAME="logic">Logic and Circuits</A></font></center></H3>
+<HR>
+<p>A logic gate is a simple circuit with one or two inputs and one
+output.  The inputs and outputs can be either ON or OFF,
+and the value of a gate's output is completely determined by the values
+of its inputs (with the proviso that when one of the inputs is changed,
+it takes some small amount of time for the output to change in
+response). Each gate does a simple computation.  Circuits that do
+complex computations can be built by connecting outputs of some gates
+to inputs of others.  In fact, an entire computer can be built in
+this way.</p>
+
+<p> Circuits are constructed from AND gates,
+OR gates, and NOT gates.  Each type of gate has a different rule for computing
+its output value.  Circuits are laid out on a <font color="#ff6633">circuit
+board</font>.  Besides gates, the circuit board can contain <font color="#ff6633">Inputs</font>,
+<font color="#ff6633">Outputs</font>, and <font color="#ff6633">Tacks</font>.
+Later, we'll see that circuits can also contain other circuits.  All these
+components can be interconnected by wires.  To the left of the circuit board 
+is a <font color="#ff6633">pallette</font>.  The pallette contains components available
+to be used on the circuit board.  You can't usually see all the components at once,
+but there is a scroll bar that allows you to scroll through all the components on the
+pallette.   <A NAME="illustration">The following illustration</A> shows the part
+of the pallette that contains
+the six standard components, along with some comments and a small sample circuit:</p>
+
+<p align=center><IMG SRC="images/xLogic1.gif" 
+        ALT="The standard component pallette" WIDTH="496" HEIGHT="461"></p>
+        
+<p>(One thing you should note: Wires cannot connect to each other except at
+Tacks.  Just because two wires cross each other on the circuit board does not
+mean that they are connected.  That is, no signal will propagate from one
+of the wires to another.  Wires can only carry signals between components
+such as gates, Tacks, Inputs, and Outputs.)</p>
+
+<p>The software that you launched should start up showing a sample circuit 
+called &quot;Basic Gates.&quot;  At the top of the circuit board are an 
+AND gate, an OR gate, and a NOT gate.  The gates are connected to some
+ Inputs and Outputs.  A more complicated circuit builtfrom several gates
+ occupies the bottom of the circuit board.</p>
+
+<p>To see how the circuit works, you have to turn on the <font color="#ff6633">power</font>.
+Power to the circuit board is turned on and off using the &quot;Power&quot;
+checkbox below the circuit board.  The power is ON when the box is checked.
+<b>Click on the Power checkbox now to turn
+on the power.</b>  (Why does the wire leading from the NOT gate come on when
+you do this?)  When the power is on, you have control over the Inputs on
+the circuit board: you can turn an input ON and OFF by clicking on it.
+The circuit does the rest: signals from the Inputs propagate along wires,
+through gates and other components, and to the Outputs of the circuit.
+<b>Try it</b> with the sample circuit.  If you have a problem, make sure the
+power is on and that you are clicking on an Input, not an Output.</p>
+
+<p>You should check that the AND, OR, and NOT gates at the top of the
+circuit board have the expected behavior when you turn their inputs ON
+and OFF.  You can also investigate the circuit in the bottom half of the
+logic board.  Below the circuit board, to the left of the Power switch,
+you'll find a <font color="#ff6633">pop-up menu</font> that can be used to
+control the speed at which signals propagate through the circuit.  The
+speed is ordinarily set to &quot;Fast.&quot;  You can use the pop-up
+menu to change the speed to &quot;Moderate&quot; or &quot;Slow&quot;
+if you want to watch the circuit in slow motion.  (For the most part,
+though, you probably want to leave the speed set to Fast.)</p>
+
+<hr width="50%">
+
+<p>Logic gates and logic circuits are associated with mathematical
+<font color="#ff6633">logic</font>, which is the study of the computations
+that can be done with the <font color="#ff6633">logical values</font>
+<b>true</b> and <b>false</b> and with
+the logical <font color="#ff6633">operators</font>
+<b>and</b>, <b>or</b>, and <b>not</b>.  This association
+comes about when we think of ON as representing <b>true</b> and OFF
+as representing <b>false</b>.  In that case, AND, OR, and NOT gates do the
+same computations as the operators <b>and</b>, <b>or</b>, and <b>not</b>.</p>
+
+<p>Mathematical logic uses <font color="#ff6633">Boolean algebra</font>,
+in which the letters A, B, C, and so on, are used to represent logical
+values.  Letters are combined using the logical operators <b>and</b>,
+<b>or</b>, and <b>not</b>.  For example,<p>
+
+<p align=center>(A <b>and</b> C) <b>or</b>
+      (B <b>and</b> (<b>not</b> C))</p>
+
+<p>is an expression of Boolean algebra.  As soon as the letters in an
+expression are assigned values <b>true</b> or <b>false</b>, the value of
+the entire expression can be computed.</p>
+
+<p>Every expression of boolean algebra corresponds to a logic circuit.
+The letters used in the expression are represented by the Inputs to
+the circuit.  Each wire in the circuit represents some part of
+the expression.  A gate takes the values from its input wires and combines
+them with the appropriate word -- <b>and</b>, <b>or</b>, or <b>not</b> -- to
+produce the label on its output wire.  The final output of the whole
+circuit represents the expression as a whole.  <A NAME="xor">For example</A>, consider
+the sample circuit.  If the inputs are labeled A and B,
+then the wires in the circuit can be labeled as follows:</p>
+
+<p align=center><IMG SRC="images/xLogic2.gif" ALT="Circuit labeled with logical expressions" WIDTH="471" HEIGHT="116"></p>
+
+<p>The circuit as a whole corresponds to the final output expression,
+(A <b>and</b> (<b>not</b> B)) <b>or</b> (B <b>and</b> (<b>not</b> A)).
+This expression in turn serves as a <font color="#ff6633">blueprint</font>
+for the circuit.  You can use it as a guide for building the circuit.
+The expression given earlier, (A <b>and</b> C) <b>or</b> (B <b>and</b> (<b>not</b> C)),
+corresponds to another sample circuit shown in the illustration 
+.</p>
+
+<p>To sum up, given any expression of Boolean algebra, a circuit can be built to
+compute that expression.  Conversely, any output of a logic circuit that does not
+contain a &quot;feedback loop&quot; can be described by a Boolean algebra expression.
+This is a powerful association that is useful in understanding and designing logic
+circuits.  (Note:  Feedback occurs when the output of a gate is connected through
+one or more other components back to an input of the same gate...)
+<HR>
+</blockquote>
+
+</BODY>
+
+</HTML>

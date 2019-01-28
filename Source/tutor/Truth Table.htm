@@ -1,0 +1,110 @@
+<HTML><HEAD><TITLE>Truth Table</TITLE>
+<script language="JavaScript">
+<!--
+document.write('<body background="images/logix.jpg">');
+var backgroundOffset = 0;
+var bgObject = eval('document.body');
+function scrollBG(maxSize) {
+backgroundOffset = backgroundOffset + 7;
+if (backgroundOffset > maxSize) backgroundOffset = 0;
+bgObject.style.backgroundPosition = "0 " + backgroundOffset;
+}
+var ScrollTimer = window.setInterval("scrollBG(768)", 47);
+//-->
+</script>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY background="images/logix.jpg">
+<H1>
+<CENTER><FONT color=white size=12><B><I>TRUTH 
+TABLES</B></I></FONT></H1></CENTER><BR><BR><FONT color=white size=5><B><I>Remember a T 
+(true) is the same as 1 (on) and a F (false) is the same as 0 
+(off).</I></B></FONT><BR><BR><BR>
+<CENTER>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=middle><FONT color=white size=5><B><I>AND GATE TRUTH 
+      TABLE</I></B><BR></FONT><FONT color=white size=4>The AND gate's truth table 
+      requires<BR>2 true inputs for a true output.<BR><I><B>By combing P and Q, 
+      the<BR>output will be a T or F.</I></B></FONT> </TD>
+    <TD align=middle><IMG src="images/ttand.gif"><BR></TD></TR>
+  <TR>
+    <TD align=middle></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD align=middle></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD align=middle></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD align=middle><FONT color=white size=5><B><I>OR GATE TRUTH 
+      TABLE</I></B><BR></FONT><FONT color=white size=4>The OR gate's truth table 
+      requires<BR>1 or more true inputs for a true output</B></FONT></TD>
+    <TD align=middle><IMG src="images/ttor.gif"><BR></TD></TR>
+  <TR>
+    <TD align=middle></TD>
+    <TD align=middle></TD></TR>
+  <TR>
+    <TD align=middle></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD align=middle></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD align=middle><FONT color=white size=5><B><I>NOT (INVERTER) TRUTH 
+      TABLE</I></B><BR></FONT><FONT color=white size=4>The NOT'S truth table 
+      demonstrates<BR>how an input is changed to its complement.<BR>For example: 
+      a true input would<BR>become a false output</B></FONT></TD>
+    <TD align=middle><IMG src="images/notp.gif"></TD>
+    <TD></TD></TR></TBODY></TABLE></CENTER><BR><BR>
+<HR>
+<BR><FONT color=white size=5><B>
+<CENTER>Now that you have reviewed the truth table <BR>for the logic gates (AND, 
+OR and NOT), we <BR>will show you how to write a logic <BR>expression from a 
+truth table. <BR></FONT></B></CENTER><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD width=250><FONT color=white size=4><B>For example: If you were given this truth 
+      table, what would be the resulting logic expression (??)?</B></FONT></TD>
+    <TD width=40></TD>
+    <TD align=middle width=200><IMG 
+    src="images/tt_exp1.gif"></TD></FONT></B></TR></TBODY></TABLE><BR><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=250><FONT color=white size=4><B><BR><BR><BR><BR><BR>1. Look at 
+      each line in the table for which the result is 1 (TRUE).</B></FONT></TD>
+    <TD width=40></TD>
+    <TD width=200><IMG 
+  src="images/tt_exp2.gif"></TD></FONT></B></TR></TBODY></TABLE><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=250><FONT color=white size=4><B><BR><BR><BR>2. For each of those: 
+      <BR>a. Find the P and Q values.<BR>b. Build an AND statement with 
+      variables (P, Q). <BR>c. If the variable is 1 then it is itself (eg. P, Q) 
+      <BR>d. If the variable is 0, then it is its negation (eg. P', Q'). 
+      <BR></B></FONT></TD>
+    <TD width=40></TD>
+    <TD align=middle width=200><IMG src="images/tt_exp3.gif"> 
+    </TD></FONT></B></TR></TBODY></TABLE><BR><BR><BR><BR>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=250><FONT color=white size=4><B><BR><BR><BR><BR><BR>3. Use OR's 
+      ("+") to connect the statements from step 2. </B></FONT></TD>
+    <TD width=40></TD>
+    <TD align=middle width=200><IMG 
+    src="images/tt_exp4.gif"></TD></FONT></B></TR></TBODY></TABLE>
+<CENTER>
+<A href="Tutorial Review.htm"
+ onmouseOver="document.images['review'].src ='image/review_On.gif'" 		
+ onmouseOut="document.images['review'].src ='image/review_Off.gif'" ) 		
+ >		
+ <IMG SRC= "image/review_Down.gif" BORDER=0 NAME="review"></A>
+
+
+</CENTER></BODY></HTML>

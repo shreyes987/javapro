@@ -1,0 +1,5 @@
+<A HREF="" 		
+ onmouseOver="document.images['intro'].src ='intro_On.gif'" 		
+ onmouseOut="document.images['intro'].src ='intro_Off.gif'" ) 		
+ >		
+ <IMG SRC= "intro_Down.gif" BORDER=0 NAME="intro"></A>
